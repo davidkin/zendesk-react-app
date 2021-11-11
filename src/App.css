@@ -43,3 +43,7 @@
 .icon {
   margin-right: var(--zd-spacing-xs);
 }
+
+.mainText {
+  text-align: center;
+}
