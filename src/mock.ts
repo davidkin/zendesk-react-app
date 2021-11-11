@@ -1,0 +1,55 @@
+import {IOrder} from './pages/Home/HomePage';
+
+export const ORDERS_MOCK: IOrder[] = [
+  {
+    billing_address: {
+      city: 'qwe',
+      company: 'qwer',
+      country: 'Afghanistan',
+      country_iso2: 'AF',
+      email: 'test@test.com',
+      first_name: 'test1',
+      last_name: 'qwer',
+      phone: 'qwewr',
+      state: '',
+      street_1: 'qqwewe',
+      street_2: 'qwer',
+      zip: 'qqq',
+    },
+    cart_id: '60daecda-6366-4527-831e-0f16e1e02670',
+  },
+  {
+    billing_address: {
+      city: 'kyiv',
+      company: '',
+      country: 'Ukraine',
+      country_iso2: 'UA',
+      email: 'volodymyr.antoshkiv@dataart.com',
+      first_name: 'volodymyr',
+      last_name: 'antoshkiv',
+      phone: '',
+      state: '',
+      street_1: 'kyiv',
+      street_2: '',
+      zip: '7800',
+    },
+    cart_id: 'a17850bb-6ccb-42a5-9d5d-c5bbb5da36ce',
+  },
+  {
+    billing_address: {
+      city: 'kyiv',
+      company: '',
+      country: 'Ukraine',
+      country_iso2: 'UA',
+      email: 'volodymyr.antoshkiv@dataart.com',
+      first_name: 'volodymyr',
+      last_name: 'antoshkiv',
+      phone: '',
+      state: '',
+      street_1: 'kyiv',
+      street_2: '',
+      zip: '7800',
+    },
+    cart_id: 'a17850bb-6ccb-42a5-9d5d-c5bbb53a36ce',
+  },
+];

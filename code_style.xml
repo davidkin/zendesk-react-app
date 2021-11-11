@@ -12,7 +12,7 @@
         <option name="HTML_NEWLINE_AFTER_LAST_ATTRIBUTE" value="When multiline"/>
     </HTMLCodeStyleSettings>
     <JSCodeStyleSettings>
-        <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false"/>
+        <option name="USE_SEMICOLON_AFTER_STATEMENT" value="true"/>
         <option name="FORCE_SEMICOLON_STYLE" value="true"/>
         <option name="SPACE_BEFORE_TYPE_COLON" value="true"/>
         <option name="REFORMAT_C_STYLE_COMMENTS" value="true"/>
@@ -22,11 +22,11 @@
         <option name="JSX_ATTRIBUTE_VALUE" value="Based on type"/>
         <option name="VAR_DECLARATION_WRAP" value="5"/>
         <option name="USE_CHAINED_CALLS_GROUP_INDENTS" value="true"/>
-        <option name="SPACES_WITHIN_OBJECT_TYPE_BRACES" value="false"/>
+        <option name="SPACES_WITHIN_OBJECT_TYPE_BRACES" value="true"/>
         <option name="IMPORT_PREFER_ABSOLUTE_PATH" value="TRUE"/>
     </JSCodeStyleSettings>
     <TypeScriptCodeStyleSettings>
-        <option name="USE_SEMICOLON_AFTER_STATEMENT" value="false"/>
+        <option name="USE_SEMICOLON_AFTER_STATEMENT" value="true"/>
         <option name="FORCE_SEMICOLON_STYLE" value="true"/>
         <option name="ENFORCE_TRAILING_COMMA" value="WhenMultiline"/>
         <option name="BLACKLIST_IMPORTS" value=""/>
