@@ -62,6 +62,4 @@ typings/
 .idea
 .vscode
 
-/dist/assets/index.html
-/dist/assets/*.bundle.*
-/dist/tmp/
+/dist
