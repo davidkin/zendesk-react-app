@@ -1,7 +1,7 @@
 import {Context} from '@zendesk/sell-zaf-app-toolbox';
 
 interface ZafContext extends Context {
-  appParams: {
+  appParams?: {
     [key: string]: string;
   };
 }

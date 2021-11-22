@@ -13,14 +13,24 @@ const OrderProvider = ({children}: OrderProviderProps) => {
   const [orderId, setOrderId] = useState<string>('');
   const client: Client | undefined = useContext(ZAFClientContext);
 
-  useEffect(() => {
-    if (client) {
-      client.context().then((data: ZafContext) => {
-        if (data.appParams) {
-          setOrderId(data.appParams.orderId);
-        }
-      });
+  const fillAppParams = async () => {
+    if (!client) {
+      return;
     }
+
+    const data: ZafContext = await client.context();
+
+    if (data.appParams) {
+      setOrderId(data.appParams.orderId);
+    }
+  };
+
+  useEffect(() => {
+    if (!client) {
+      return;
+    }
+
+    fillAppParams();
   }, []);
 
   const contextValue: OrderState = {orderId};
