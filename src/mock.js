@@ -208,7 +208,7 @@ export const ORDERS_MOCK = [
       "street_2": "",
       "zip": "7800",
     },
-    "cart_id": "a17850bb-6ccb-42a5-9d5d-c5bbb5da36ce",
+    "cart_id": "a17850bb-6ccb-42a5-9d5d-c5bbb53a36ce",
     "channel_id": 1,
     "coupon_discount": "0.0000",
     "coupons": {
@@ -759,4 +759,4 @@ export const ORDERS_MOCK = [
     "wrapping_cost_tax": "0.0000",
     "wrapping_cost_tax_class_id": 3,
   },
-]
+];
