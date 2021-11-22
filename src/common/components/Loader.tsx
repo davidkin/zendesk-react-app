@@ -2,7 +2,7 @@ import * as React from 'react';
 import {Spinner} from '@zendeskgarden/react-loaders';
 import {Col} from '@zendeskgarden/react-grid';
 
-import css from './Loader.css';
+import css from 'src/common/components/Loader.css';
 
 const Loader = () => {
   return (

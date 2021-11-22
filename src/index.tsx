@@ -1,9 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import {useEffect, useMemo} from 'react';
+import {useMemo} from 'react';
 import {ThemeProvider} from '@zendeskgarden/react-theming';
 import {ZAFClientContextProvider, Client} from '@zendesk/sell-zaf-app-toolbox';
-import EntryView from './EntryView';
+import HomePage from './pages/Home/HomePage';
+import {OrderProvider} from './common/context/OrderContext';
 
 declare var ZAFClient: {
   init: () => Client;
@@ -12,14 +13,12 @@ declare var ZAFClient: {
 const App = () => {
   const client = useMemo(() => ZAFClient.init(), []);
 
-  useEffect(() => {
-    client.context().then((data: any) => console.log('Context:', data));
-  }, [client]);
-
   return (
     <ZAFClientContextProvider value={client}>
       <ThemeProvider>
-        <EntryView />
+        <OrderProvider>
+          <HomePage />
+        </OrderProvider>
       </ThemeProvider>
     </ZAFClientContextProvider>
   );
