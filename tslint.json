@@ -17,6 +17,7 @@
   "rules": {
     "prettier": true,
     "react-hooks-nesting": "error",
+    "react-hooks/exhaustive-deps": "warning",
     "eofline": true,
     "interface-name": false,
     "ordered-imports": false,

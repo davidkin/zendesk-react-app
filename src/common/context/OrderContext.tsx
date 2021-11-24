@@ -1,6 +1,6 @@
-import React, {useEffect, useContext, useReducer} from 'react';
-import {Client, ZAFClientContext} from '@zendesk/sell-zaf-app-toolbox';
-import {ZafContext} from './types';
+import React, {useEffect, useContext, useReducer, FC} from 'react';
+import {ZAFClientContext} from '@zendesk/sell-zaf-app-toolbox';
+import {ZafClientData} from './types';
 
 export enum ACTIONS {
   SET_ORDER_ID = 'SET_ORDER_ID',
@@ -21,7 +21,7 @@ const initialState = {
 const orderReducer = (state: OrderState, action: OrderAction) => {
   switch (action.type) {
     case ACTIONS.SET_ORDER_ID: {
-      return {orderId: action.orderId };
+      return {orderId: action.orderId};
     }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
@@ -29,29 +29,17 @@ const orderReducer = (state: OrderState, action: OrderAction) => {
   }
 };
 
-const OrderProvider = ({children}: OrderProviderProps) => {
+const OrderProvider: FC<OrderProviderProps> = ({children}) => {
   const [state, dispatch] = useReducer(orderReducer, initialState);
-  const client: Client | undefined = useContext(ZAFClientContext);
-
-  const fillAppParams = async () => {
-    if (!client) {
-      return;
-    }
-
-    const data: ZafContext = await client.context();
-
-    if (data.appParams) {
-      dispatch({type: ACTIONS.SET_ORDER_ID, orderId: data.appParams.orderId});
-    }
-  };
+  const data: ZafClientData | undefined = useContext(ZAFClientContext);
 
   useEffect(() => {
-    if (!client) {
+    if (!data?.appParams) {
       return;
     }
 
-    fillAppParams();
-  }, []);
+    dispatch({type: ACTIONS.SET_ORDER_ID, orderId: data.appParams.orderId});
+  }, [data]);
 
   const contextValue: OrderState = {orderId: state.orderId};
 

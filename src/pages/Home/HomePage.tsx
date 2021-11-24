@@ -1,9 +1,11 @@
-import React, {FC, useMemo} from 'react';
+import React, {FC, useCallback, useContext, useMemo} from 'react';
 import {Row, Col, Grid} from '@zendeskgarden/react-grid';
 import {ORDERS_MOCK} from '../../mock';
-import {ZENDESK_URL} from '../../environment';
+import {GENERATE_ZENDESK_URL} from '../../environment';
 import {useOrderContext} from '../../common/context/OrderContext';
 import css from './HomePage.css';
+import {ZafClientData} from 'src/common/context/types';
+import {ZAFClientContext} from '@zendesk/sell-zaf-app-toolbox';
 
 export interface IOrder {
   cart_id: string;
@@ -16,6 +18,8 @@ type Order = IOrder | undefined;
 
 export const HomePage: FC = () => {
   const {orderId} = useOrderContext();
+  const data: ZafClientData | undefined = useContext(ZAFClientContext);
+
   const currentOrder: Order = useMemo(
     () =>
       orderId
@@ -24,15 +28,21 @@ export const HomePage: FC = () => {
     [orderId],
   );
 
-  console.log('[Home Page] Current Order:', currentOrder);
+  const handleRoute = useCallback((cartId: string) =>{
+      if (!data?.account) {
+        return;
+      }
 
-  const handleRoute = (cartId: string): void => {
-    window.open(
-      `${ZENDESK_URL}?zcli_apps=true&orderId=${cartId}`,
-      '_blank',
-      'noopener',
-    );
-  };
+      const url = GENERATE_ZENDESK_URL(data.account.subdomain);
+
+      window.open(
+        `${url}?zcli_apps=true&orderId=${cartId}`,
+        '_blank',
+        'noopener',
+      );
+    },
+    [data],
+  );
 
   return (
     <div>

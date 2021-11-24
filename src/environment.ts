@@ -1,2 +1,3 @@
-export const ZENDESK_URL =
-  'https://theknot1637000659.zendesk.com/agent/apps/paper-zendesk-react-app';
+export const ZENDESK_APP_NAME = 'zaf-react-skeleton-app';
+export const GENERATE_ZENDESK_URL = (domain: string) =>
+  `https://${domain}.zendesk.com/agent/apps/${ZENDESK_APP_NAME}`;
