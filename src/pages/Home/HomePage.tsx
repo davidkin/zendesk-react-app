@@ -24,6 +24,8 @@ export const HomePage: FC = () => {
     [orderId],
   );
 
+  console.log('[Home Page] Current Order:', currentOrder);
+
   const handleRoute = (cartId: string): void => {
     window.open(
       `${ZENDESK_URL}?zcli_apps=true&orderId=${cartId}`,
