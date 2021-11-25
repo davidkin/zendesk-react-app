@@ -7,6 +7,7 @@
     "start": "webpack -w --env development",
     "build": "NODE_ENV=production webpack --mode production && npm run validate && zcli apps:package ./dist && echo \"Package is ready to upload to Zendesk\"",
     "test": "jest --env=jsdom",
+    "deploy:dev": "zcli apps:update ./dist",
     "server": "zcli apps:server ./dist",
     "validate": "zcli apps:package ./dist",
     "lint": "tslint --project tsconfig.json --fix",
