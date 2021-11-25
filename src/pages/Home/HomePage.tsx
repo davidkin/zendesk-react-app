@@ -1,11 +1,11 @@
 import React, {FC, useCallback, useContext, useMemo} from 'react';
 import {Row, Col, Grid} from '@zendeskgarden/react-grid';
+import {ZAFClientContext} from '@zendesk/sell-zaf-app-toolbox';
 import {ORDERS_MOCK} from '../../mock';
 import {GENERATE_ZENDESK_URL} from '../../environment';
 import {useOrderContext} from '../../common/context/OrderContext';
+import {ZafClientData} from '../../common/context/types';
 import css from './HomePage.css';
-import {ZafClientData} from 'src/common/context/types';
-import {ZAFClientContext} from '@zendesk/sell-zaf-app-toolbox';
 
 export interface IOrder {
   cart_id: string;
@@ -28,7 +28,8 @@ export const HomePage: FC = () => {
     [orderId],
   );
 
-  const handleRoute = useCallback((cartId: string) =>{
+  const handleRoute = useCallback(
+    (cartId: string) => {
       if (!data?.account) {
         return;
       }
