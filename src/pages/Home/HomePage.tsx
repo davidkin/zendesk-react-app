@@ -4,7 +4,7 @@ import {ZAFClientContext} from '@zendesk/sell-zaf-app-toolbox';
 import {ORDERS_MOCK} from '../../mock';
 import {GENERATE_ZENDESK_URL} from '../../environment';
 import {useOrderContext} from '../../common/context/OrderContext';
-import {ZafClientData} from 'src/common/types';
+import {ZafClientData} from '../../common/types';
 import {IOrder} from '../../common/interfaces';
 import css from './HomePage.css';
 

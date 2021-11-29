@@ -1,6 +1,6 @@
 import React, {useEffect, useContext, useReducer, FC} from 'react';
 import {ZAFClientContext} from '@zendesk/sell-zaf-app-toolbox';
-import {ZafClientData} from 'src/common/types';
+import {ZafClientData} from '../types';
 
 export enum ACTIONS {
   SET_ORDER_ID = 'SET_ORDER_ID',
@@ -40,8 +40,6 @@ const OrderProvider: FC<OrderProviderProps> = ({children}) => {
 
     dispatch({type: ACTIONS.SET_ORDER_ID, orderId: data.appParams.orderId});
   }, [data]);
-
-  console.log('data:', data);
 
   const contextValue: OrderState = {orderId: state.orderId};
 
