@@ -1,13 +1,5 @@
-import {Client, Context} from '@zendesk/sell-zaf-app-toolbox';
-
-interface IClientExtended extends Client {
-  account?: {
-    subdomain: string;
-  };
-  appParams?: {
-    [key: string]: string;
-  };
-}
+import {Context} from '@zendesk/sell-zaf-app-toolbox';
+import {IClientExtended} from './interfaces';
 
 type ZafClientData =
   | IClientExtended

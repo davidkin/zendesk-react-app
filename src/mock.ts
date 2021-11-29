@@ -1,4 +1,4 @@
-import {IOrder} from './pages/Home/HomePage';
+import {IOrder} from './common/interfaces';
 
 export const ORDERS_MOCK: IOrder[] = [
   {
@@ -8,8 +8,8 @@ export const ORDERS_MOCK: IOrder[] = [
       country: 'Afghanistan',
       country_iso2: 'AF',
       email: 'test@test.com',
-      first_name: 'test1',
-      last_name: 'qwer',
+      first_name: 'Tedd',
+      last_name: 'Tipper',
       phone: 'qwewr',
       state: '',
       street_1: 'qqwewe',
@@ -17,6 +17,7 @@ export const ORDERS_MOCK: IOrder[] = [
       zip: 'qqq',
     },
     cart_id: '60daecda-6366-4527-831e-0f16e1e02670',
+    date_created: '18 August 2021',
   },
   {
     billing_address: {
@@ -25,8 +26,8 @@ export const ORDERS_MOCK: IOrder[] = [
       country: 'Ukraine',
       country_iso2: 'UA',
       email: 'volodymyr.antoshkiv@dataart.com',
-      first_name: 'volodymyr',
-      last_name: 'antoshkiv',
+      first_name: 'Ben',
+      last_name: 'Archer',
       phone: '',
       state: '',
       street_1: 'kyiv',
@@ -34,6 +35,7 @@ export const ORDERS_MOCK: IOrder[] = [
       zip: '7800',
     },
     cart_id: 'a17850bb-6ccb-42a5-9d5d-c5bbb5da36ce',
+    date_created: '16 August 2021',
   },
   {
     billing_address: {
@@ -42,8 +44,8 @@ export const ORDERS_MOCK: IOrder[] = [
       country: 'Ukraine',
       country_iso2: 'UA',
       email: 'volodymyr.antoshkiv@dataart.com',
-      first_name: 'volodymyr',
-      last_name: 'antoshkiv',
+      first_name: 'Tom',
+      last_name: 'Mercy',
       phone: '',
       state: '',
       street_1: 'kyiv',
@@ -51,5 +53,6 @@ export const ORDERS_MOCK: IOrder[] = [
       zip: '7800',
     },
     cart_id: 'a17850bb-6ccb-42a5-9d5d-c5bbb53a36ce',
+    date_created: '01 September 2021',
   },
 ];
