@@ -7,6 +7,7 @@ export interface IClientExtended extends Client {
   appParams?: {
     [key: string]: string;
   };
+  instanceGuid?: string;
 }
 
 export interface IOrder {
