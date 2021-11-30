@@ -6,7 +6,7 @@ import {GENERATE_ZENDESK_URL} from '../../environment';
 import {useOrderContext} from '../../common/context/OrderContext';
 import {ZafClientData} from '../../common/types';
 import {IOrder} from '../../common/interfaces';
-import css from './HomePage.css';
+import styles from './HomePage.css';
 
 type Order = IOrder | undefined;
 
@@ -43,7 +43,7 @@ export const HomePage: FC = () => {
       <Grid debug>
         {!currentOrder ? (
           ORDERS_MOCK.map((item) => (
-            <Row key={item.cart_id} className={css.card}>
+            <Row key={item.cart_id} className={styles.card}>
               <Col md={6} offsetMd={3} sm={12}>
                 <h3>
                   Order: <b>#{item.cart_id.split('-')[0].toUpperCase()}</b>
@@ -77,15 +77,15 @@ export const HomePage: FC = () => {
                 {currentOrder.date_created}
               </div>
 
-              <div className={css.infoBlock}>
+              <div className={styles.infoBlock}>
                 <h3>Order activity: </h3>
                 <hr />
               </div>
-              <div className={css.infoBlock}>
+              <div className={styles.infoBlock}>
                 <h3>Payments: </h3>
                 <hr />
               </div>
-              <div className={css.infoBlock}>
+              <div className={styles.infoBlock}>
                 <h3>Shipments: </h3>
                 <hr />
               </div>

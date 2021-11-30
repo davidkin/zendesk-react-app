@@ -1,15 +1,5 @@
 @import '@zendeskgarden/css-variables';
 
-:global(html),
-:global(body) {
-  height: 100%;
-  overflow: auto;
-}
-
-:global(#app) {
-  height: 100%;
-}
-
 .App {
   height: 100%;
   color: var(--zd-color-grey-800);

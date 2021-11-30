@@ -1,13 +1,13 @@
 import {Client} from '@zendesk/sell-zaf-app-toolbox';
 
 export interface IClientExtended extends Client {
-  account?: {
+  account: {
     subdomain: string;
   };
-  appParams?: {
+  appParams: {
     [key: string]: string;
   };
-  instanceGuid?: string;
+  instanceGuid: string;
 }
 
 export interface IOrder {
