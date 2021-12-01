@@ -54,3 +54,8 @@
 .card {
   margin-bottom: 10px;
 }
+
+.searchBlock {
+  margin: 10px auto;
+  text-align: center;
+}

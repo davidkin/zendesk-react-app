@@ -1,14 +1,22 @@
 import React, {FC, useCallback, useContext, useMemo} from 'react';
 import {Row, Col, Grid} from '@zendeskgarden/react-grid';
 import {ZAFClientContext} from '@zendesk/sell-zaf-app-toolbox';
+import algoliasearch from 'algoliasearch';
+import {InstantSearch, SearchBox, Hits} from 'react-instantsearch-dom';
 import {ORDERS_MOCK} from '../../mock';
 import {GENERATE_ZENDESK_URL} from '../../environment';
 import {useOrderContext} from '../../common/context/OrderContext';
 import {ZafClientData} from '../../common/types';
 import {IOrder} from '../../common/interfaces';
+import Order from '../../common/components/Order/Order';
 import styles from './HomePage.css';
 
 type Order = IOrder | undefined;
+
+const searchClient = algoliasearch(
+  'I67M45588W',
+  '2143daef7aa5060f5f128a32dd601e0f',
+);
 
 export const HomePage: FC = () => {
   const {orderId} = useOrderContext();
@@ -40,6 +48,13 @@ export const HomePage: FC = () => {
 
   return (
     <div>
+      <div className={styles.searchBlock}>
+        <InstantSearch searchClient={searchClient} indexName="dev_tk">
+          <SearchBox />
+          <Hits hitComponent={Order} />
+        </InstantSearch>
+      </div>
+
       <Grid debug>
         {!currentOrder ? (
           ORDERS_MOCK.map((item) => (

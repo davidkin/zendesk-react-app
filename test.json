@@ -1,0 +1,22 @@
+[
+  {
+    "firstname": "Jimmie",
+    "lastname": "Barninger",
+    "zip_code": 12345
+  },
+  {
+    "firstname": "John",
+    "lastname": "Doe",
+    "zip_code": 456456
+  },
+  {
+    "firstname": "Dima",
+    "lastname": "Roler",
+    "zip_code": 888899
+  },
+  {
+    "firstname": "Pasha",
+    "lastname": "Scroller",
+    "zip_code": 78787
+  }
+]
