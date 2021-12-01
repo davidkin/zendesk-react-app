@@ -1,61 +1,57 @@
 @import '@zendeskgarden/css-variables';
 
 .App {
-  height: 100%;
+  height: 100vh;
   color: var(--zd-color-grey-800);
   font-family: var(--zd-font-family-system);
   font-size: var(--zd-font-size-md-monospace);
   font-weight: var(--zd-font-weight-light);
   line-height: normal;
+  background-color: #f0ffff;
+  padding: 24px;
 }
 
-.header {
-  background-color: var(--zd-color-grey-100);
-  border-bottom: solid 1px var(--zd-color-grey-300);
-  padding: var(--zd-spacing-sm);
+.searchFrom {
+  margin-bottom: 27px;
+}
+
+.searchTitle {
+  display: flex;
 }
 
 .title {
-  color: var(--zd-color-black);
-  font-size: var(--zd-font-size-md);
-}
-
-.dateContainer {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: var(--zd-spacing-sm);
-}
-
-.contentView {
-  padding: var(--zd-spacing-sm);
-}
-
-.icon {
-  margin-right: var(--zd-spacing-xs);
-}
-
-.mainText {
-  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 11px;
+  margin-left: 9px;
   margin-bottom: 10px;
 }
 
-.productInfo {
-  margin-top: 10px;
+.title:first-letter {
+  font-size: 14px;
 }
 
-.infoBlock {
-  margin-bottom: 10px;
+.row {
+  margin-bottom: 25px;
 }
 
-.name {
-  margin-bottom: 10px;
+.searchField > form > input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--zd-color-grey-300);
+  outline: none !important;
+  padding-left: 30px;
+  font-size: 13px;
+  border-radius: 0;
 }
 
-.card {
-  margin-bottom: 10px;
+.searchField > form > input::placeholder {
+  color: var(--zd-color-grey-800);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
-.searchBlock {
-  margin: 10px auto;
-  text-align: center;
+.hitsBlock {
+  margin-top: 30px;
 }
