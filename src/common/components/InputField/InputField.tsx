@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, memo} from 'react';
 import {Field, Input, Label} from '@zendeskgarden/react-forms';
 import styles from './InputField.css';
 
@@ -11,13 +11,13 @@ interface IProps {
   label?: string;
 }
 
-const InputField: FC<IProps> = ({placeholder, label}) => {
+const InputField: FC<IProps> = memo(({placeholder, label}) => {
   return (
     <Field className={styles.field}>
       {label && <Label>{label}</Label>}
       <Input placeholder={placeholder} />
     </Field>
   );
-};
+});
 
 export default InputField;

@@ -55,3 +55,52 @@
 .hitsBlock {
   margin-top: 30px;
 }
+
+.actionBlock {
+  background-color: #fcfaeb;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 705px;
+  margin: auto;
+  border: 1px solid var(--zd-color-grey-300);
+  align-items: center;
+}
+
+.acionInfo h2 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.acionInfo h2:first-letter {
+  font-size: 32px;
+  margin-right: 5px;
+}
+
+.acionInfo span {
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #68737d;
+  font-weight: bold;
+}
+
+.imageRow {
+  margin: 40px 0;
+}
+
+.imgBlock {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img:first-child {
+  margin-right: 12px;
+}

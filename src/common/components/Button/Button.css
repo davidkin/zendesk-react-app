@@ -1,0 +1,18 @@
+.button {
+    border-radius: 4px;
+    width: 240px;
+    border: 0;
+    padding: 12px 0;
+    font-size: 16px;
+}
+
+.dark {
+    background-color: #17494D !important;
+    color: #fff !important;
+}
+
+.transparent {
+    background-color: transparent !important;
+    border: 1px solid #68737D !important;
+    color: #68737D !important;
+}
